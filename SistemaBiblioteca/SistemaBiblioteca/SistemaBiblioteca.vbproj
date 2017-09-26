@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE044D29-06B6-4368-BFC1-A6395477CA48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaBiblioteca.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaBiblioteca</RootNamespace>
+    <AssemblyName>SistemaBiblioteca</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaBiblioteca.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaBiblioteca.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\DAOs\SocioDao.vb" />
+    <Compile Include="Datos\DAOs\UsuarioDao.vb" />
+    <Compile Include="Datos\Helper\DBConexion.vb" />
+    <Compile Include="Logica\Entidades\Socio.vb" />
+    <Compile Include="Logica\Entidades\Usuario.vb" />
+    <Compile Include="Logica\Servicios\SocioServicio.vb" />
+    <Compile Include="Logica\Servicios\UsuarioServicio.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentacion\FRMacceso.Designer.vb">
+      <DependentUpon>FRMacceso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FRMacceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FRMmenu.Designer.vb">
+      <DependentUpon>FRMmenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FRMmenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FRMsocios.Designer.vb">
+      <DependentUpon>FRMsocios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FRMsocios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FRMusuarios.Designer.vb">
+      <DependentUpon>FRMusuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FRMusuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FRMacceso.resx">
+      <DependentUpon>FRMacceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FRMmenu.resx">
+      <DependentUpon>FRMmenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FRMsocios.resx">
+      <DependentUpon>FRMsocios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FRMusuarios.resx">
+      <DependentUpon>FRMusuarios.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_page_document_16676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentediting_editdocuments_text_documentedi_2820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_icon-icons.com_52401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_search_find_locate_1551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_deleteusers_delete_male_user_maleclient_2348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groups_people_people_1715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_person_people_6100.png" />
+    <None Include="Resources\abstract-2381626_1920.jpg" />
+    <None Include="Resources\bootloader_users_person_people_6080.png" />
+    <None Include="Resources\abstract-2381626_1280.jpg" />
+    <None Include="Resources\Fondo-de-pantalla-Abstracto-65.jpg" />
+    <None Include="Resources\1606092.jpg" />
+    <Content Include="Resources\icons8-Eliminar-30.png" />
+    <Content Include="Resources\icons8-Marca de verificación-30 %281%29.png" />
+    <None Include="Resources\icons8-Refresh_2.png" />
+    <None Include="Resources\ok_accept_16747.png" />
+    <None Include="Resources\muevo.jpg" />
+    <None Include="Resources\lalala.jpg" />
+    <Content Include="Resources\userpassword_deusuari_787.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
