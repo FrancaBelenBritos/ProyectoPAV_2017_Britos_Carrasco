@@ -2,7 +2,7 @@
 Public Class DBConexion
 
     Private string_conexion As String
-    Private Shared instance As DBConexion 'Unica instancia de la clase
+    Private Shared instance As DBConexion 'Unica instancia de la clase, aplica singleton
 
     Private Sub New()
         string_conexion = "Data Source=localhost;Initial Catalog=db_Biblioteca;Integrated Security=True"
